@@ -19,14 +19,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class LoginTest extends BaseClass {
 
-	@Test
+	@Test(groups= {"sanity"},description="Login failure test")
 	public void TC01_LoginFailureTest() {
 		LoginPage lp = new LoginPage();
 		lp.LoginFunction("abc@xyz.com", "Abcd@1234");
 		lp.ValidateErrorMsg("The email or password you have entered is invalid.");
 	}
 
-	@Test
+	@Test(groups= {"sanity"},description="Login success test")
 	@Parameters({ "param1", "param2" })
 	public void TC02_LoginSuccessTest(String Uname, String Pwd) {
 		LoginPage lp = new LoginPage();

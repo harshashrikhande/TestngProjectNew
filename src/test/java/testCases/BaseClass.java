@@ -22,7 +22,7 @@ public class BaseClass {
 	public XSSFSheet sheet;
 
 
-	@BeforeMethod
+	@BeforeMethod(alwaysRun=true)
 	public void SetUpDriver() {
 
 		driver = new ChromeDriver();
@@ -31,13 +31,13 @@ public class BaseClass {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	}
 
-	@AfterMethod
+	@AfterMethod(alwaysRun=true)
 	public void TearDown() {
 
-		driver.close();
+		driver.quit();
 	}
 
-	@BeforeTest
+	@BeforeTest(alwaysRun=true)
 	public void SetUpExcel1() throws IOException  {
 		FileInputStream fis = new FileInputStream("exceldata.xlsx");
 		wbook = new XSSFWorkbook(fis);
@@ -45,7 +45,7 @@ public class BaseClass {
 
 	}
 
-	@AfterTest
+	@AfterTest(alwaysRun=true)
 	public void CloseUpExcel() throws IOException {
 		wbook.close();
 	}
