@@ -1,0 +1,6 @@
+testCases\BaseClass.class
+com\simplilearn\TestngProjectNew\AppTest.class
+testCases\HomePageTest.class
+pages\LoginPage.class
+testCases\LoginTest.class
+pages\HomePage.class
