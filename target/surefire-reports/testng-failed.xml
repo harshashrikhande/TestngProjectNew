@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [sanity]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" parallel="methods" name="Test(failed)" verbose="0">
+    <parameter name="param1" value="aaa@bbb.com"/>
+    <parameter name="param2" value="Abc@12345"/>
+    <groups>
+      <run>
+        <include name="sanity"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testCases.LoginTest">
+        <methods>
+          <include name="SetUpDriver"/>
+          <include name="TearDown"/>
+          <include name="TC02_LoginSuccessTest"/>
+          <include name="TC01_LoginFailureTest"/>
+        </methods>
+      </class> <!-- testCases.LoginTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [sanity] -->

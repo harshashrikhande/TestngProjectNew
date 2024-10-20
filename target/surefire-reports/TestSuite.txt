@@ -1,4 +1,32 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 54.896 s - in TestSuite
+Tests run: 6, Failures: 4, Errors: 0, Skipped: 2, Time elapsed: 181.302 s <<< FAILURE! - in TestSuite
+testCases.LoginTest.SetUpDriver  Time elapsed: 181.026 s  <<< FAILURE!
+org.openqa.selenium.SessionNotCreatedException: 
+Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'LAPTOP-GSAAFOHU', ip: '192.168.31.131'
+Caused by: org.openqa.selenium.TimeoutException: 
+java.util.concurrent.TimeoutException
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.23'
+Driver info: driver.version: RemoteWebDriver
+Caused by: java.util.concurrent.TimeoutException
+
+testCases.LoginTest.SetUpDriver  Time elapsed: 181.028 s  <<< FAILURE!
+org.openqa.selenium.SessionNotCreatedException: 
+Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'LAPTOP-GSAAFOHU', ip: '192.168.31.131'
+Caused by: org.openqa.selenium.TimeoutException: 
+java.util.concurrent.TimeoutException
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.23'
+Driver info: driver.version: RemoteWebDriver
+Caused by: java.util.concurrent.TimeoutException
+
+testCases.LoginTest.TearDown  Time elapsed: 181.028 s  <<< FAILURE!
+java.lang.NullPointerException
+
+testCases.LoginTest.TearDown  Time elapsed: 181.028 s  <<< FAILURE!
+java.lang.NullPointerException
+

@@ -3,15 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.LoginTest">
+      <class name="grid.SeleniumGridExample">
         <methods>
-          <include name="SetUpDriver"/>
-          <include name="CloseUpExcel"/>
-          <include name="TC05_LoginFailureTest"/>
-          <include name="SetUpExcel1"/>
-          <include name="TearDown"/>
+          <include name="test1"/>
         </methods>
-      </class> <!-- testCases.LoginTest -->
+      </class> <!-- grid.SeleniumGridExample -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-sanity" class="navigator-link">
-              <span class="suite-name border-passed">sanity</span>
+              <span class="suite-name border-skipped">sanity</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,26 +91,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">2 methods,  2 skipped,  </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-sanity" class="hide-methods passed suite-sanity"> (hide)</a> <!-- hide-methods passed suite-sanity -->
-                      <a href="#" panel-name="suite-sanity" class="show-methods passed suite-sanity"> (show)</a> <!-- show-methods passed suite-sanity -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-sanity" class="hide-methods skipped suite-sanity"> (hide)</a> <!-- hide-methods skipped suite-sanity -->
+                      <a href="#" panel-name="suite-sanity" class="show-methods skipped suite-sanity"> (show)</a> <!-- show-methods skipped suite-sanity -->
                     </span>
-                    <div class="method-list-content passed suite-sanity">
+                    <div class="method-list-content skipped suite-sanity">
                       <span>
-                        <img src="passed.png" width="3%"/>
+                        <img src="skipped.png" width="3%"/>
                         <a href="#" panel-name="suite-sanity" title="testCases.LoginTest" class="method navigator-link" hash-for-method="TC01_LoginFailureTest">TC01_LoginFailureTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-sanity" title="testCases.LoginTest" class="method navigator-link" hash-for-method="TC02_LoginSuccessTest(aaa@bbb.com, Abc@12345)">TC02_LoginSuccessTest(aaa@bbb.com, Abc@12345)</a> <!-- method navigator-link -->
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-sanity" title="testCases.LoginTest" class="method navigator-link" hash-for-method="TC02_LoginSuccessTest">TC02_LoginSuccessTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-sanity -->
+                    </div> <!-- method-list-content skipped suite-sanity -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -122,9 +122,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-sanity" class="panel sanity">
-          <div class="suite-sanity-class-passed">
+          <div class="suite-sanity-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">testCases.LoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -133,22 +133,87 @@
                   <a name="TC01_LoginFailureTest">
                   </a> <!-- TC01_LoginFailureTest -->
                   <span class="method-name">TC01_LoginFailureTest</span>
+                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: &apos;LAPTOP-GSAAFOHU&apos;, ip: &apos;192.168.31.131&apos;
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:563)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:245)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:152)
+	at testCases.BaseClass.SetUpDriver(BaseClass.java:107)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.23&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:418)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:374)
+	at org.openqa.selenium.remote.tracing.TracedHttpClient.execute(TracedHttpClient.java:54)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:89)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:162)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:53)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	... 20 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1888)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2023)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:401)
+	... 30 more
+... Removed 13 stack frames
+</div> <!-- stack-trace -->
                   <em>
 (Login failure test)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="TC02_LoginSuccessTest(aaa@bbb.com, Abc@12345)">
-                  </a> <!-- TC02_LoginSuccessTest(aaa@bbb.com, Abc@12345) -->
+                  <a name="TC02_LoginSuccessTest">
+                  </a> <!-- TC02_LoginSuccessTest -->
                   <span class="method-name">TC02_LoginSuccessTest</span>
-                  <span class="parameters">(aaa@bbb.com, Abc@12345)</span>
+                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: &apos;LAPTOP-GSAAFOHU&apos;, ip: &apos;192.168.31.131&apos;
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:563)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:245)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:152)
+	at testCases.BaseClass.SetUpDriver(BaseClass.java:107)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.23&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:418)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:374)
+	at org.openqa.selenium.remote.tracing.TracedHttpClient.execute(TracedHttpClient.java:54)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:89)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:162)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:53)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	... 20 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1888)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2023)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:401)
+	... 30 more
+... Removed 13 stack frames
+</div> <!-- stack-trace -->
                   <em>
 (Login success test)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-sanity-class-passed -->
+          </div> <!-- suite-sanity-class-skipped -->
         </div> <!-- panel sanity -->
         <div panel-name="test-xml-sanity" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -159,7 +224,7 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;sanity&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
-  &lt;test thread-count=&quot;1&quot; name=&quot;Test&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;2&quot; parallel=&quot;methods&quot; name=&quot;Test&quot; verbose=&quot;0&quot;&gt;
     &lt;parameter name=&quot;param1&quot; value=&quot;aaa@bbb.com&quot;/&gt;
     &lt;parameter name=&quot;param2&quot; value=&quot;Abc@12345&quot;/&gt;
     &lt;groups&gt;
@@ -224,16 +289,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'TC02_LoginSuccessTest')
 data.setCell(0, 2, 'testCases.LoginTest')
-data.setCell(0, 3, 9221);
+data.setCell(0, 3, 0);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'TC01_LoginFailureTest')
 data.setCell(1, 2, 'testCases.LoginTest')
-data.setCell(1, 3, 9079);
+data.setCell(1, 3, 0);
 window.suiteTableData['sanity']= { tableData: data, tableDiv: 'times-div-sanity'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 18 seconds</span>
+              <span class="suite-total-time">Total running time: 0 ms</span>
               <div id="times-div-sanity">
               </div> <!-- times-div-sanity -->
             </div> <!-- times-div -->
@@ -269,38 +334,38 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.LoginTest</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">SetUpExcel1</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-test before -->
               <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">SetUpDriver</span>
-                <span class="method-start">445 ms</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">SetUpDriver</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TearDown</span>
+                <span class="method-start">180358 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TearDown</span>
+                <span class="method-start">180359 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">TC01_LoginFailureTest</span>
-                <span class="method-start">29545 ms</span>
+                <span class="method-start">-1729357654168 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">TearDown</span>
-                <span class="method-start">38627 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">SetUpDriver</span>
-                <span class="method-start">39500 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">TC02_LoginSuccessTest(aaa@bbb.com, Abc@12345)</span>
-                <span class="method-start">43707 ms</span>
+                <span class="method-name">TC02_LoginSuccessTest</span>
+                <span class="method-start">-1729357654168 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">TearDown</span>
-                <span class="method-start">52928 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-test after">
-                <span class="method-name">CloseUpExcel</span>
-                <span class="method-start">53960 ms</span>
-              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

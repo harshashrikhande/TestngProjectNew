@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Aug 04 20:43:50 IST 2024</td>
+<td>Started on:</td><td>Sat Oct 19 19:47:33 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>9 seconds (9229 ms)</td>
+<tr><td>Total time:</td><td>180 seconds (180429 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,18 +67,125 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testCases.LoginTest.TC05_LoginFailureTest()'><b>TC05_LoginFailureTest</b><br>Test class: testCases.LoginTest</td>
-<td></td>
-<td>6</td>
-<td>testCases.LoginTest@15713d56</td></tr>
+<td title='grid.SeleniumGridExample.test1()'><b>test1</b><br>Test class: grid.SeleniumGridExample</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: &apos;LAPTOP-GSAAFOHU&apos;, ip: &apos;192.168.31.131&apos;
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:232)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:141)
+	at grid.SeleniumGridExample.test1(SeleniumGridExample.java:25)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:399)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:355)
+	at org.openqa.selenium.remote.tracing.TracedHttpClient.execute(TracedHttpClient.java:54)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:89)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:162)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	... 29 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:382)
+	... 39 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace1187972599", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1187972599'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: &apos;LAPTOP-GSAAFOHU&apos;, ip: &apos;192.168.31.131&apos;
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:232)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:141)
+	at grid.SeleniumGridExample.test1(SeleniumGridExample.java:25)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:399)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:355)
+	at org.openqa.selenium.remote.tracing.TracedHttpClient.execute(TracedHttpClient.java:54)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:89)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:162)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	... 29 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:382)
+	... 39 more
+</pre></div></td>
+<td>180</td>
+<td>grid.SeleniumGridExample@54504ecd</td></tr>
 </table><p>
 </body>
 </html>
