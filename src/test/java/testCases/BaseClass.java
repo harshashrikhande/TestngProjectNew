@@ -12,6 +12,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -93,13 +94,20 @@ public class BaseClass {
 		
 		String browser = System.getProperty("Browser");
 		//String browser = "chrome";
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--no-sandbox"); 
+		options.addArguments("--disable-dev-shm-using") ;
+		options.addArguments("--window-size=1920,1080");
+		options.addArguments("--headless") ;
+		options.addArguments("--ignore-ssl-errors=yes");
+		options.addArguments("--ignore-certificate-errors");
 		
 		if (browser.equalsIgnoreCase("firefox")) {
 			driver = new FirefoxDriver();
 		}else if(browser.equalsIgnoreCase("remote-chrome")) {
 			
 			DesiredCapabilities cap = new DesiredCapabilities();
-			cap.setPlatform(Platform.WIN10);
+			cap.setPlatform(Platform.WIN11);
 			cap.setBrowserName("chrome");
 
 			//URL hub = new URL("http://localhost:4444/");
@@ -108,7 +116,7 @@ public class BaseClass {
 			
 		}
 		else {
-			driver = new ChromeDriver();
+			driver = new ChromeDriver(options);
 		}
 		
 		SetDriver(driver);
